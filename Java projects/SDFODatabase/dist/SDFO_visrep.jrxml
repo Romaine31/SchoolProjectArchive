@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="1050" pageHeight="842" columnWidth="1010" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="157410a1-ebb9-410a-bfd1-4f284872b6dd">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM sdfo_table]]>
+	</queryString>
+	<field name="unique_id" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="student_name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="student_number" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="year_level" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="student_section" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="date_of_visit" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="time_of_visit" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="reason_of_visit" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="person_of_interest" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="violation" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="appointment_or_walkin" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="1010" height="79" forecolor="#FFFFFF" backcolor="#009900" uuid="6a367a92-1b78-420b-a89d-6540cf505637"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[VISITATION REPORT]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="30" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="59" y="0" width="173" height="20" backcolor="#99FF99" uuid="9f8e2c67-333e-4ded-abd4-789154db2b4d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[student name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="232" y="0" width="82" height="20" backcolor="#99FF99" uuid="e3de17e5-f480-4b5e-a299-17f97e443181"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[student number]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="370" y="0" width="100" height="20" backcolor="#99FF99" uuid="57697383-9179-4ae9-b2c2-16763c33949a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[student section]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="470" y="0" width="79" height="20" backcolor="#99FF99" uuid="88211d3c-4d30-457a-964d-5794c5c94e49"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[date of visit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="314" y="0" width="56" height="20" backcolor="#99FF99" uuid="9040e5f9-f8ea-4148-8d2f-d90291a97116"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[year level]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="741" y="0" width="148" height="20" backcolor="#99FF99" uuid="1a8a3dbc-4bf3-4590-8ca5-dbefbabf27e3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[person  of interest]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="889" y="0" width="121" height="20" backcolor="#99FF99" uuid="acda9662-3859-464a-877e-a4ebdaf3097f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[appointment or walkin]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="605" y="0" width="136" height="20" backcolor="#99FF99" uuid="1ad43a8b-19f2-40bb-bfe3-5c525bb993b7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[reason of visit]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="549" y="0" width="56" height="20" backcolor="#99FF99" uuid="64fc1200-5f42-49d8-927d-a6dd16fc50f7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="59" height="20" backcolor="#99FF99" uuid="00b44574-e1b2-4b11-8688-96875b3d6cff"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[unique id]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="34" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="59" height="30" backcolor="#E7DFDF" uuid="e7af0655-b1f3-4912-8d71-39cbf74be32e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{unique_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="59" y="0" width="173" height="30" backcolor="#E7DFDF" uuid="64475fb8-14a2-4ca8-9b79-765c5cac56a5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="232" y="0" width="82" height="30" backcolor="#E7DFDF" uuid="a3bd68c2-7b89-4acb-a6ec-1316a18e9d75"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_number}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="314" y="0" width="56" height="30" backcolor="#E7DFDF" uuid="f30ee2a7-b400-4652-90a9-9cc42b956198"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{year_level}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="370" y="0" width="100" height="30" backcolor="#E7DFDF" uuid="2bdf303c-bbf7-448e-9d53-15eb26734495"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{student_section}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="470" y="0" width="79" height="30" backcolor="#E7DFDF" uuid="6dcffc37-22cf-4b85-ae7b-afbaae693f91"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{date_of_visit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="549" y="0" width="56" height="30" backcolor="#E7DFDF" uuid="19d63f50-07ed-410d-a531-d2d4adba0e2b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{time_of_visit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="605" y="0" width="136" height="30" backcolor="#E7DFDF" uuid="5a6d4a06-b702-4ef8-be56-b7af9d6e8150"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{reason_of_visit}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="741" y="0" width="148" height="30" backcolor="#E7DFDF" uuid="779898c6-8c83-48c3-83de-74b601b741e3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{person_of_interest}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="889" y="0" width="121" height="30" backcolor="#E7DFDF" uuid="7796afa1-3097-47da-bf62-b7fbb0136a91"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{appointment_or_walkin}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

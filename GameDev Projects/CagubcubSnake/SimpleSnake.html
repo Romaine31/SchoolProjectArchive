@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SnakeGame</title>
+	<style>
+		body{
+		margin: auto;
+		display:flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		}
+	</style>
+</head>
+<body>
+<h1>snake game</h1>
+<canvas id="playfield" width="400" height="400"></canvas>
+<script>
+
+	canvas = document.getElementById("playfield");
+	ctx=canvas.getContext("2d");
+	document.addEventListener("keydown",keyPush);
+	
+let ux=uy=10;
+let grid=tile=20;
+let xv=yv=0;
+let ax=ay=10;
+let body=[];
+let tail=5;
+let score=-1;
+let speed=12;
+let gameOver=false;
+let colors=["yellow","green","blue"]
+let colorindex=0;
+let bg = new Image();
+let apple = new Image();
+const eatSound = new Audio("eat.mp3");
+const loseSound = new Audio("lose.mp3");
+bg.src = "bg.png";
+apple.src = "apple.png";
+function game(){
+
+if (gameOver==true){
+	return;
+}
+
+	ux+=xv;
+    uy+=yv;
+    if(ux<0) {
+        gameOver=true;
+    }
+    else if(ux==tile) {
+        gameOver=true;
+    }
+    else if(uy<0) {
+        gameOver=true;
+    }
+    else if(uy==tile) {
+        gameOver=true;
+    }
+
+ctx.fillStyle="#c2b280";
+ctx.drawImage(bg,0,0,canvas.width,canvas.height);
+drawScore();
+ctx.fillStyle="green";
+for (var t=0;t<body.length;t++){
+	if (colorindex>2)
+		colorindex=0;
+	ctx.fillStyle=colors[colorindex];
+	ctx.fillRect(body[t].x*grid,body[t].y*grid,grid-2,grid-2);
+	if (yv == 0 && xv == 0){
+    gameOver = false;
+	}
+	else if(body[t].x==ux && body[t].y==uy){
+		gameOver=true;
+	}
+}
+body.push({x:ux, y:uy});
+while(body.length>tail){
+body.shift();
+}
+
+if(ax==ux && ay==uy){
+	tail++;
+	eatSound.play();
+	score++;
+	colorindex++;
+	ax=Math.floor(Math.random()*tile);
+	ay=Math.floor(Math.random()*tile);
+}
+ctx.fillStyle="red";
+ctx.drawImage(apple,ax*grid,ay*grid,grid-2,grid-2);
+//ctx.fillRect(ax*grid,ay*grid,grid-2,grid-2);
+
+if (gameOver){
+ctx.fillStyle = "white"
+ctx.font = "50px Verdana";
+ctx.fillText("game over!", canvas.width/6.5, canvas.height/2);
+loseSound.play();
+}
+}
+
+function drawScore(){
+ctx.fillStyle="white";
+ctx.font="20px Verdana";
+ctx.fillText("Score "+score, canvas.width - 240,20);
+}
+
+function keyPush(evt) {
+	if (event.keyCode == 87) {
+		if (yv == 1) return;
+			yv = -1;
+			xv = 0;
+}
+	if (event.keyCode == 83) {
+		if (yv == -1) return;
+			yv = 1;
+			xv = 0;
+}
+	if (event.keyCode == 65) {
+		if (xv == 1) return;
+			yv = 0;
+			xv = -1;
+}
+	if (event.keyCode == 68) {
+		if (xv == -1) return;
+			yv = 0;
+			xv = 1;
+}
+}
+setInterval(game,1000/speed);
+</script>
+<a href="splash.html">home Screen</a>
+</body>
+</html>

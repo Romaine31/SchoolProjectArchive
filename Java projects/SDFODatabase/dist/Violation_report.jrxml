@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="1000" pageHeight="842" columnWidth="960" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="29530ab3-9773-4078-a91c-8d1d842361df">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT * FROM violations]]>
+	</queryString>
+	<field name="Name" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Student_ID" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Level" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Section" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Type_of_Violation" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Violation" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Date" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="Time" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<title>
+		<band height="114" splitType="Stretch">
+			<staticText>
+				<reportElement x="366" y="31" width="230" height="61" uuid="6f1346f4-33d0-4cc7-8de0-9876445a2217"/>
+				<textElement textAlignment="Center">
+					<font size="24"/>
+				</textElement>
+				<text><![CDATA[SDFO Violation Report]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="860" y="0" width="100" height="20" uuid="4cff7b01-95c8-4430-aae0-af5f72dca56e"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="33" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="354" y="0" width="51" height="33" backcolor="#C2DAC6" uuid="0b0cbca9-eb86-4b04-a134-a07ba6e9638a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[level]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="202" height="33" backcolor="#C2DAC6" uuid="ca00b559-60c4-4164-838a-9836aa9a9151"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="405" y="0" width="71" height="33" backcolor="#C2DAC6" uuid="fdfefe3f-c93c-41f1-a1b3-08b745f1d271"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[section]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="202" y="0" width="152" height="33" backcolor="#C2DAC6" uuid="f3bc837d-6f28-4ed7-aa32-db0720f967d3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[student id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="793" y="0" width="100" height="33" backcolor="#C2DAC6" uuid="e56eee4b-4be9-414a-be82-b2dd6676a154"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="476" y="0" width="170" height="33" backcolor="#C2DAC6" uuid="c28f014f-c223-4eff-be7b-ef871205b6db"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Type of violation]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="893" y="0" width="67" height="33" backcolor="#C2DAC6" uuid="c54231ab-e221-4815-8144-f8d2af78e93c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Time]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="646" y="0" width="147" height="33" backcolor="#C2DAC6" uuid="82e77591-5c69-47fb-b045-33f65e4b7f5a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[violation]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="0" width="202" height="20" backcolor="#EAEAEA" uuid="2e71cf27-ba95-4a5d-ad2c-46781c6acfb6"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="202" y="0" width="152" height="20" backcolor="#EAEAEA" uuid="e9243754-96aa-4e12-abe9-f842c8921257"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Student_ID}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="354" y="0" width="51" height="20" backcolor="#EAEAEA" uuid="b767db3d-9ae4-4f62-936b-89880b377362"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Level}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="405" y="0" width="71" height="20" backcolor="#EAEAEA" uuid="3e2230c3-7084-47b5-8c59-592f6ba88560"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Section}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="476" y="0" width="170" height="20" backcolor="#EAEAEA" uuid="37fe26e4-5560-4e3e-9679-e72cd7a34e19"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Type_of_Violation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="646" y="0" width="147" height="20" backcolor="#EAEAEA" uuid="c617c69b-0574-4631-849c-2cb182bb6de5"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Violation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="793" y="0" width="100" height="20" backcolor="#EAEAEA" uuid="d16e95e5-3bb9-4779-93ce-3c9ac756a223"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Date}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="893" y="0" width="67" height="20" backcolor="#EAEAEA" uuid="3bcc02e2-007a-4789-8442-930d1dd98c20"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Time}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>
